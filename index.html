@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THRIVE WITH KAUSHIK - Transform Your Life & Business</title>
+    
+    <!-- React and Babel -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Source Sans Pro', sans-serif; background: #f8f9fa; }
+        
+        /* Social Buttons */
+        .social-float { position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 999; display: flex; flex-direction: column; gap: 12px; }
+        .social-btn { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,0.25); font-size: 20px; font-weight: bold; }
+        
+        /* Loading Screen */
+        #loading { display: flex; align-items: center; justify-content: center; min-height: 100vh; flex-direction: column; gap: 20px; }
+        .spinner { width: 50px; height: 50px; border: 5px solid #f3f3f3; border-top: 5px solid #1a472a; border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <!-- Social Media Buttons -->
+    <div class="social-float">
+        <a href="https://facebook.com/kaushiktalks" target="_blank" class="social-btn" style="background: #1877f2;">f</a>
+        <a href="https://instagram.com/thrivewithkaushik" target="_blank" class="social-btn" style="background: #E4405F;">📷</a>
+        <a href="https://x.com/KAUSHIKTALKS" target="_blank" class="social-btn" style="background: #000;">𝕏</a>
+        <a href="https://linkedin.com/in/thrivewithkaushik" target="_blank" class="social-btn" style="background: #0077b5;">in</a>
+        <a href="https://wa.me/919953715382" target="_blank" class="social-btn" style="background: #25D366;">💬</a>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading">
+        <div class="spinner"></div>
+        <p>Loading THRIVE WITH KAUSHIK...</p>
+    </div>
+
+    <!-- React App Root -->
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        // Simple React App
+        function App() {
+            const [page, setPage] = React.useState('home');
+            const [cart, setCart] = React.useState([]);
+            
+            const config = {
+                siteName: "THRIVE WITH KAUSHIK",
+                logo: "/Users/kvconsultancy/Desktop/logo.png",
+                colors: { primary: "#1a472a", secondary: "#d4af37", accent: "#e74c3c" },
+                contact: { mobile: "9953715382", email: "thrivewithkaushik@gmail.com" }
+            };
+            
+            const services = [
+                { id: 1, title: "Motivational Speaking", price: 50000, originalPrice: 60000, image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800" },
+                { id: 2, title: "Business Coaching", price: 25000, originalPrice: 30000, image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800" },
+                { id: 3, title: "Life Coaching", price: 15000, originalPrice: 18000, image: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800" }
+            ];
+            
+            const products = [
+                { id: 101, title: "Success Mindset Book", price: 799, originalPrice: 999, image: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800" },
+                { id: 102, title: "Motivation Canvas", price: 2499, originalPrice: 3499, image: "https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=800" },
+                { id: 103, title: "Thrive T-Shirt", price: 699, originalPrice: 899, image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800" }
+            ];
+            
+            const addToCart = (item) => {
+                setCart([...cart, { ...item, quantity: 1 }]);
+                alert('✅ Added to cart!');
+            };
+            
+            const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+            
+            return (
+                <div>
+                    <style>{`
+                        .btn { padding: 14px 28px; border: none; border-radius: 12px; font-weight: 600; cursor: pointer; font-size: 15px; }
+                        .btn-primary { background: ${config.colors.primary}; color: white; }
+                        .btn-secondary { background: ${config.colors.secondary}; color: ${config.colors.primary}; }
+                        .btn-accent { background: ${config.colors.accent}; color: white; }
+                        .card { background: white; border-radius: 16px; padding: 28px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); margin-bottom: 24px; }
+                        .container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+                        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; }
+                        h1,h2,h3 { font-family: 'Playfair Display', serif; color: ${config.colors.primary}; }
+                        @media (max-width: 768px) { .grid-3 { grid-template-columns: 1fr; } }
+                    `}</style>
+                    
+                    {/* Header */}
+                    <header style={{ background: 'white', boxShadow: '0 2px 16px rgba(0,0,0,0.08)', position: 'sticky', top: 0, zIndex: 1000 }}>
+                        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '18px 24px' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '14px', cursor: 'pointer' }} onClick={() => setPage('home')}>
+                                <span style={{ fontSize: '40px' }}>{config.logo}</span>
+                                <h1 style={{ fontSize: '24px' }}>{config.siteName}</h1>
+                            </div>
+                            
+                            <nav style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+                                <button onClick={() => setPage('home')} className="btn" style={{ background: page === 'home' ? config.colors.primary : 'white', color: page === 'home' ? 'white' : '#666' }}>Home</button>
+                                <button onClick={() => setPage('services')} className="btn" style={{ background: page === 'services' ? config.colors.primary : 'white', color: page === 'services' ? 'white' : '#666' }}>Services</button>
+                                <button onClick={() => setPage('shop')} className="btn" style={{ background: page === 'shop' ? config.colors.primary : 'white', color: page === 'shop' ? 'white' : '#666' }}>Shop</button>
+                                <button onClick={() => setPage('contact')} className="btn" style={{ background: page === 'contact' ? config.colors.primary : 'white', color: page === 'contact' ? 'white' : '#666' }}>Contact</button>
+                                <button className="btn btn-accent" style={{ position: 'relative' }}>
+                                    🛒 Cart {cartCount > 0 && <span style={{ position: 'absolute', top: -8, right: -8, background: config.colors.secondary, color: config.colors.primary, width: 24, height: 24, borderRadius: '50%', fontSize: 12, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{cartCount}</span>}
+                                </button>
+                            </nav>
+                        </div>
+                    </header>
+                    
+                    {/* Main Content */}
+                    <main>
+                        {page === 'home' && (
+                            <div>
+                                <section style={{ background: `linear-gradient(135deg, ${config.colors.primary}, #0f2818)`, color: 'white', padding: '100px 20px', textAlign: 'center' }}>
+                                    <div className="container">
+                                        <h1 style={{ fontSize: '62px', marginBottom: '24px', color: 'white' }}>Transform Your Life & Business</h1>
+                                        <p style={{ fontSize: '24px', marginBottom: '40px', opacity: 0.95 }}>Expert coaching and motivational speaking services</p>
+                                        <button className="btn btn-secondary" style={{ fontSize: '17px', padding: '16px 40px' }} onClick={() => setPage('services')}>Explore Services</button>
+                                    </div>
+                                </section>
+                                
+                                <section style={{ padding: '80px 20px' }}>
+                                    <div className="container">
+                                        <h2 style={{ textAlign: 'center', fontSize: '46px', marginBottom: '56px' }}>Why Choose Us</h2>
+                                        <div className="grid-3">
+                                            <div className="card" style={{ textAlign: 'center' }}>
+                                                <div style={{ fontSize: '56px', marginBottom: '20px' }}>🎯</div>
+                                                <h3 style={{ fontSize: '24px', marginBottom: '12px' }}>Expert Guidance</h3>
+                                                <p style={{ color: '#666' }}>Over 15 years of experience</p>
+                                            </div>
+                                            <div className="card" style={{ textAlign: 'center' }}>
+                                                <div style={{ fontSize: '56px', marginBottom: '20px' }}>🏆</div>
+                                                <h3 style={{ fontSize: '24px', marginBottom: '12px' }}>Proven Results</h3>
+                                                <p style={{ color: '#666' }}>Thousands of clients transformed</p>
+                                            </div>
+                                            <div className="card" style={{ textAlign: 'center' }}>
+                                                <div style={{ fontSize: '56px', marginBottom: '20px' }}>💼</div>
+                                                <h3 style={{ fontSize: '24px', marginBottom: '12px' }}>Tailored Approach</h3>
+                                                <p style={{ color: '#666' }}>Customized for your needs</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        )}
+                        
+                        {page === 'services' && (
+                            <div style={{ padding: '60px 20px' }}>
+                                <div className="container">
+                                    <h1 style={{ fontSize: '48px', marginBottom: '56px', textAlign: 'center' }}>Our Services</h1>
+                                    <div className="grid-3">
+                                        {services.map(service => {
+                                            const discount = Math.round((1 - service.price/service.originalPrice) * 100);
+                                            return (
+                                                <div key={service.id} className="card">
+                                                    <img src={service.image} alt={service.title} style={{ width: '100%', height: '240px', objectFit: 'cover', borderRadius: '12px', marginBottom: '20px' }} />
+                                                    <h3 style={{ fontSize: '24px', marginBottom: '12px' }}>{service.title}</h3>
+                                                    <div style={{ marginBottom: '20px' }}>
+                                                        <span style={{ textDecoration: 'line-through', color: '#999', marginRight: '10px' }}>₹{service.originalPrice.toLocaleString()}</span>
+                                                        <span style={{ fontSize: '32px', fontWeight: 900, color: config.colors.primary }}>₹{service.price.toLocaleString()}</span>
+                                                        <span style={{ background: config.colors.accent, color: 'white', padding: '4px 10px', borderRadius: '20px', fontSize: '13px', marginLeft: '10px' }}>{discount}% OFF</span>
+                                                    </div>
+                                                    <button className="btn btn-primary" style={{ width: '100%' }} onClick={() => addToCart(service)}>Add to Cart</button>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                        
+                        {page === 'shop' && (
+                            <div style={{ padding: '60px 20px' }}>
+                                <div className="container">
+                                    <h1 style={{ fontSize: '48px', marginBottom: '56px', textAlign: 'center' }}>Shop</h1>
+                                    <div className="grid-3">
+                                        {products.map(product => {
+                                            const discount = Math.round((1 - product.price/product.originalPrice) * 100);
+                                            return (
+                                                <div key={product.id} className="card">
+                                                    <img src={product.image} alt={product.title} style={{ width: '100%', height: '240px', objectFit: 'cover', borderRadius: '12px', marginBottom: '20px' }} />
+                                                    <h3 style={{ fontSize: '22px', marginBottom: '12px' }}>{product.title}</h3>
+                                                    <div style={{ marginBottom: '20px' }}>
+                                                        <span style={{ textDecoration: 'line-through', color: '#999', marginRight: '10px' }}>₹{product.originalPrice.toLocaleString()}</span>
+                                                        <span style={{ fontSize: '28px', fontWeight: 900, color: config.colors.primary }}>₹{product.price.toLocaleString()}</span>
+                                                        <span style={{ background: config.colors.accent, color: 'white', padding: '4px 10px', borderRadius: '20px', fontSize: '12px', marginLeft: '10px' }}>{discount}% OFF</span>
+                                                    </div>
+                                                    <button className="btn btn-accent" style={{ width: '100%' }} onClick={() => addToCart(product)}>Add to Cart</button>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                        
+                        {page === 'contact' && (
+                            <div style={{ padding: '60px 20px' }}>
+                                <div className="container" style={{ maxWidth: '800px' }}>
+                                    <h1 style={{ fontSize: '48px', marginBottom: '56px', textAlign: 'center' }}>Get In Touch</h1>
+                                    <div className="card">
+                                        <form onSubmit={(e) => { e.preventDefault(); alert('✅ Message sent! We will contact you soon.'); }}>
+                                            <div style={{ marginBottom: '20px' }}>
+                                                <input type="text" placeholder="Your Name" required style={{ width: '100%', padding: '16px', border: '2px solid #e0e0e0', borderRadius: '12px', fontSize: '15px' }} />
+                                            </div>
+                                            <div style={{ marginBottom: '20px' }}>
+                                                <input type="email" placeholder="Email" required style={{ width: '100%', padding: '16px', border: '2px solid #e0e0e0', borderRadius: '12px', fontSize: '15px' }} />
+                                            </div>
+                                            <div style={{ marginBottom: '20px' }}>
+                                                <input type="tel" placeholder="Mobile" required style={{ width: '100%', padding: '16px', border: '2px solid #e0e0e0', borderRadius: '12px', fontSize: '15px' }} />
+                                            </div>
+                                            <div style={{ marginBottom: '20px' }}>
+                                                <input type="text" placeholder="Location (City, Country) *" required style={{ width: '100%', padding: '16px', border: '2px solid #e0e0e0', borderRadius: '12px', fontSize: '15px' }} />
+                                            </div>
+                                            <div style={{ marginBottom: '28px' }}>
+                                                <textarea placeholder="Your Message" required rows="6" style={{ width: '100%', padding: '16px', border: '2px solid #e0e0e0', borderRadius: '12px', fontSize: '15px' }}></textarea>
+                                            </div>
+                                            <button type="submit" className="btn btn-primary" style={{ width: '100%', fontSize: '17px' }}>📧 Send Message</button>
+                                        </form>
+                                    </div>
+                                    
+                                    <div className="card" style={{ marginTop: '32px', background: '#f8f9fa' }}>
+                                        <h3 style={{ marginBottom: '20px' }}>Contact Information</h3>
+                                        <p style={{ marginBottom: '12px' }}>📞 {config.contact.mobile}</p>
+                                        <p>✉️ {config.contact.email}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </main>
+                    
+                    {/* Footer */}
+                    <footer style={{ background: config.colors.primary, color: 'white', padding: '60px 20px', marginTop: '80px' }}>
+                        <div className="container" style={{ textAlign: 'center' }}>
+                            <h3 style={{ color: 'white', fontSize: '22px', marginBottom: '16px' }}>{config.siteName}</h3>
+                            <p style={{ opacity: 0.9, marginBottom: '24px' }}>Transform your life and business</p>
+                            <p style={{ opacity: 0.8 }}>© 2024 {config.siteName}. All rights reserved.</p>
+                        </div>
+                    </footer>
+                </div>
+            );
+        }
+        
+        // Hide loading screen and render app
+        document.getElementById('loading').style.display = 'none';
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
