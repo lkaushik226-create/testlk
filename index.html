@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preload" href="https://unpkg.com/react@18/umd/react.production.min.js" as="script" crossorigin />
-<link rel="preload" href="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" as="script" crossorigin />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THRIVE WITH KAUSHIK - Professional Coaching & Consulting</title>
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html, body { 
-  background: linear-gradient(135deg, #1a472a 0%, #0f2818 100%); /* Dark theme, no flash */
-  font-family: 'Source Sans Pro', sans-serif; 
-  min-height: 100vh;
-}
-#root { min-height: 100vh; } 
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Source Sans Pro', sans-serif; background: #f8f9fa; }
+        
         /* Modal */
         .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.85); display: flex; align-items: center; justify-content: center; z-index: 10000; padding: 20px; animation: fadeIn 0.3s; }
         .modal-content { background: white; border-radius: 20px; max-width: 700px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 40px; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
@@ -577,7 +570,7 @@ html, body {
                                 {t}
                             </button>
                         ))}
-                        <button onClick={() => { setAdminLoggedIn(false); setIsAdmin(false); }} style={{ width: '100%', padding: '14px', background: '#e74c3c', border: 'none', color: 'white', borderRadius: '10px', cursor: 'pointer', marginTop: '32px', fontWeight: 600 }}>Logout</button>
+                        <button onClick={() => { setAdminLoggedIn(false); setIsAdmin(false); }} style={{ width: '100%', padding: '14px', background: '#e74c3c', border: 'none', color: 'white', borderRadius: '10px', cursor: 'pointer', marginTop: '32px', fontWeight: 600' }}>Logout</button>
                     </div>
                     
                     <div style={{ flex: 1, padding: '40px', background: '#f5f7f9', overflowY: 'auto' }}>
@@ -731,7 +724,7 @@ html, body {
                     <section style={{ background: `linear-gradient(135deg, ${config.colors.primary}, #0f2818)`, color: 'white', padding: '100px 20px', textAlign: 'center' }}>
                         <div className="container">
                             <h1 style={{ fontSize: '62px', marginBottom: '24px', color: 'white' }}>Transform Your Life & Business</h1>
-                            <p style={{ fontSize: '24px', marginBottom: '40px', opacity: 0.95 }}>Expert coaching and motivational speaking</p>
+                            <p style={{ fontSize: '24px', marginBottom: '40px', opacity: 0.95' }}>Expert coaching and motivational speaking</p>
                             <button className="btn btn-secondary" style={{ fontSize: '17px', padding: '16px 40px' }} onClick={() => setPage('services')}>Explore Services</button>
                         </div>
                     </section>
