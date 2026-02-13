@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Lalit Kaushik - MNRE Empanelled Chartered Engineer providing Solar Consultancy, Structural Design, PMC Services in Delhi NCR. Government-approved engineering solutions.">
+    <meta name="keywords" content="chartered engineer delhi, MNRE solar consultant, structural design services, project management consultancy, third party inspection, engineering services Delhi">
+    <meta name="author" content="Lalit Kaushik">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="IN-DL">
+    <meta name="geo.placename" content="Delhi">
+    <meta name="geo.position" content="28.7041;77.2957">
+    <meta name="ICBM" content="28.7041, 77.2957">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lalit Kaushik - MNRE Chartered Engineer | Solar & Structural Consultancy">
+    <meta property="og:description" content="Government-empanelled engineering services - Solar, Structural Design, PMC, Third-Party Inspection">
+    <meta property="og:url" content="https://lalitkaushik.com">
+    <meta property="og:locale" content="en_IN">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lalit Kaushik - Chartered Engineer">
+    <meta name="twitter:description" content="MNRE Empanelled Solar Consultant & Structural Design Expert">
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Lalit Kaushik - Chartered Engineer",
+      "description": "MNRE Empanelled Chartered Engineer providing Solar Consultancy, Structural Design, and Engineering Services",
+      "url": "https://lalitkaushik.com",
+      "logo": "https://lalitkaushik.com/logo.png",
+      "image": "https://lalitkaushik.com/office.jpg",
+      "telephone": "+91-9953715382",
+      "email": "rudrakaushik@me.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "C-4/357, Yamuna Vihar",
+        "addressLocality": "Delhi",
+        "postalCode": "110053",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "28.7041",
+        "longitude": "77.2957"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "priceRange": "₹₹",
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/lalitkaushik"
+      ]
+    }
+    </script>
+    
+    <title>Lalit Kaushik - MNRE Chartered Engineer | Solar Consultant Delhi</title>
+    
+    <!-- React and Babel -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: #F8F9FA; color: #2D3436; }
+        
+        /* Contact Float Button */
+        .contact-float { position: fixed; right: 20px; bottom: 20px; z-index: 999; display: flex; flex-direction: column; gap: 12px; }
+        .contact-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; box-shadow: 0 4px 16px rgba(0,0,0,0.25); font-size: 24px; transition: all 0.3s; }
+        .contact-btn:hover { transform: scale(1.15); box-shadow: 0 6px 24px rgba(0,0,0,0.35); }
+        
+        /* Modal */
+        .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(26,26,46,0.85); display: flex; align-items: center; justify-content: center; z-index: 10000; padding: 20px; animation: fadeIn 0.3s; backdrop-filter: blur(4px); }
+        .modal-content { background: white; border-radius: 12px; max-width: 900px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 40px; position: relative; animation: slideUp 0.3s; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+        .modal-close { position: absolute; top: 20px; right: 20px; background: #f0f0f0; border: none; font-size: 28px; cursor: pointer; color: #666; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+        .modal-close:hover { background: #e0e0e0; transform: rotate(90deg); }
+        
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        
+        @media (max-width: 768px) { 
+            .contact-float { bottom: 10px; right: 10px; }
+            .contact-btn { width: 50px; height: 50px; font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Contact Float Buttons -->
+    <div class="contact-float">
+        <a href="https://wa.me/919953715382?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20engineering%20services" target="_blank" class="contact-btn" style="background: #25D366;" title="WhatsApp">💬</a>
+        <a href="tel:+919953715382" class="contact-btn" style="background: #D4AF37;" title="Call Now">📞</a>
+        <a href="mailto:rudrakaushik@me.com" class="contact-btn" style="background: #1A1A2E;" title="Email">✉️</a>
+    </div>
+
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const { useState, useEffect, createContext, useContext } = React;
+        
+        // ==================== CONTEXT ====================
+        const AppContext = createContext();
+        const useApp = () => useContext(AppContext);
+        
+        // ==================== DATA INITIALIZATION ====================
+        const getInitialData = () => {
+            const stored = localStorage.getItem('lalitkaushikCEData');
+            if (stored) return JSON.parse(stored);
+            
+            return {
+                config: {
+                    siteName: "LALIT KAUSHIK",
+                    subtitle: "CHARTERED ENGINEER (MECHANICAL)",
+                    credentials: "MNRE EMPANELLED | SOLAR CONSULTANT",
+                    logo: "⚙️",
+                    colors: { primary: "#1A1A2E", secondary: "#D4AF37", neutral: "#F8F9FA" },
+                    contact: { 
+                        mobile: "9953715382", 
+                        email: "rudrakaushik@me.com",
+                        address: "C-4/357, Yamuna Vihar, Delhi – 110053",
+                        landmark: "Near Rath Wala Mandir",
+                        metro: "Gokalpuri Metro (400m) | Maujpur Metro (1km)"
+                    },
+                    about: {
+                        title: "Professional Engineering Consultancy",
+                        intro: "Lalit Kaushik is a highly qualified Chartered Engineer specializing in solar energy consultancy, structural design, and project management services. With MNRE empanelment and extensive expertise, he provides comprehensive engineering solutions for government and private sector projects across India.",
+                        education: ["B.Tech (Mechanical Engineering)", "MBA (Consulting)"],
+                        credentials: ["MNRE Empanelled Chartered Engineer", "Solar Consultant", "Structural Design Expert"]
+                    }
+                },
+                services: [
+                    { 
+                        id: 1, 
+                        name: "Solar Consultancy", 
+                        icon: "☀️",
+                        description: "MNRE empanelled solar power consultancy services including feasibility studies, design, and certification",
+                        details: "Comprehensive solar consultancy services including site assessment, solar PV system design, MNRE subsidy assistance, net metering approvals, capacity calculations, and performance monitoring. Suitable for rooftop solar, ground-mounted solar parks, and commercial installations.",
+                        pricing: { type: "range", min: 15000, max: 50000 },
+                        enabled: true,
+                        category: "Solar"
+                    },
+                    { 
+                        id: 2, 
+                        name: "Structural Design", 
+                        icon: "🏗️",
+                        description: "Complete structural design services for industrial, commercial and residential projects",
+                        details: "Professional structural design services including foundation design, steel structure design, RCC design, load calculations, soil investigation interpretation, and preparation of detailed structural drawings as per IS codes.",
+                        pricing: { type: "percentage", percentage: 2.5 },
+                        enabled: true,
+                        category: "Structural"
+                    },
+                    { 
+                        id: 3, 
+                        name: "Structural Vetting", 
+                        icon: "✅",
+                        description: "Third-party structural design review and certification services",
+                        details: "Independent structural vetting and certification of designs prepared by others. Includes verification of calculations, compliance with IS codes, safety assessment, and issue of chartered engineer certificate.",
+                        pricing: { type: "range", min: 20000, max: 75000 },
+                        enabled: true,
+                        category: "Structural"
+                    },
+                    { 
+                        id: 4, 
+                        name: "Design Vetting", 
+                        icon: "📐",
+                        description: "Comprehensive review and vetting of engineering designs",
+                        details: "Professional vetting services for various engineering designs including electrical, HVAC, plumbing, fire safety systems. Ensures compliance with applicable codes and standards.",
+                        pricing: { type: "range", min: 18000, max: 60000 },
+                        enabled: true,
+                        category: "Vetting"
+                    },
+                    { 
+                        id: 5, 
+                        name: "Thermal Design Vetting", 
+                        icon: "🌡️",
+                        description: "Thermal analysis and design vetting for HVAC and energy systems",
+                        details: "Specialized thermal design vetting including heat load calculations, energy modeling, HVAC system optimization, and thermal comfort analysis as per NBC and ASHRAE standards.",
+                        pricing: { type: "fixed", amount: 25000 },
+                        enabled: true,
+                        category: "Vetting"
+                    },
+                    { 
+                        id: 6, 
+                        name: "Calculation Vetting", 
+                        icon: "🔢",
+                        description: "Verification and certification of engineering calculations",
+                        details: "Detailed vetting of engineering calculations including structural, thermal, electrical load, hydraulic calculations. Chartered engineer certification provided upon verification.",
+                        pricing: { type: "range", min: 12000, max: 40000 },
+                        enabled: true,
+                        category: "Vetting"
+                    },
+                    { 
+                        id: 7, 
+                        name: "Capacity Calculation", 
+                        icon: "📊",
+                        description: "Load and capacity assessment for various engineering systems",
+                        details: "Professional capacity calculation services for solar systems, electrical installations, HVAC systems, water supply, and industrial equipment. Includes detailed reports with calculations.",
+                        pricing: { type: "fixed", amount: 15000 },
+                        enabled: true,
+                        category: "Assessment"
+                    },
+                    { 
+                        id: 8, 
+                        name: "Project Management Consultancy", 
+                        icon: "💼",
+                        description: "End-to-end project management services for engineering projects",
+                        details: "Complete PMC services including project planning, execution monitoring, quality assurance, vendor coordination, progress reporting, and project closeout. Available for construction and industrial projects.",
+                        pricing: { type: "percentage", percentage: 3 },
+                        enabled: true,
+                        category: "PMC"
+                    },
+                    { 
+                        id: 9, 
+                        name: "Pre-Bid Consultancy", 
+                        icon: "📋",
+                        description: "Technical and commercial consultancy for tender preparation and bidding",
+                        details: "Expert pre-bid services including tender document review, technical evaluation, cost estimation, bid strategy development, and compliance checking for government and private tenders.",
+                        pricing: { type: "range", min: 10000, max: 35000 },
+                        enabled: true,
+                        category: "Consultancy"
+                    },
+                    { 
+                        id: 10, 
+                        name: "Third-Party Inspection", 
+                        icon: "🔍",
+                        description: "Independent inspection and certification of plant, machinery and equipment",
+                        details: "Comprehensive third-party inspection services for procurement, commissioning, and periodic assessment of plant and machinery. Includes quality verification, compliance checking, and chartered engineer certification.",
+                        pricing: { type: "quote" },
+                        enabled: true,
+                        category: "Inspection"
+                    }
+                ],
+                enquiries: [],
+                testimonials: [
+                    {
+                        id: 1,
+                        name: "Rajesh Kumar",
+                        company: "Green Energy Solutions Pvt Ltd",
+                        rating: 5,
+                        text: "Excellent solar consultancy services. Lalit helped us navigate MNRE approvals and subsidy process smoothly. Highly recommended for solar projects.",
+                        date: "2024-11-20",
+                        enabled: true
+                    },
+                    {
+                        id: 2,
+                        name: "Priya Sharma",
+                        company: "Urban Infrastructure Corp",
+                        rating: 5,
+                        text: "Professional structural vetting services. Thorough review and detailed certification. Great communication throughout the project.",
+                        date: "2024-10-15",
+                        enabled: true
+                    }
+                ],
+                disclaimer: "Note: The above prices are general indicative charges. Final fees may vary depending on scope of work, urgency, location, and documentation requirements."
+            };
+        };
+        
+        // ==================== MAIN APP ====================
+        function App() {
+            const [data, setData] = useState(getInitialData());
+            const [page, setPage] = useState('home');
+            const [isAdmin, setIsAdmin] = useState(false);
+            const [adminLoggedIn, setAdminLoggedIn] = useState(false);
+            const [selectedService, setSelectedService] = useState(null);
+            const [showEnquiryModal, setShowEnquiryModal] = useState(false);
+            
+            useEffect(() => {
+                localStorage.setItem('lalitkaushikCEData', JSON.stringify(data));
+                // Auto SEO - Update document title based on page
+                const titles = {
+                    home: 'Lalit Kaushik - MNRE Chartered Engineer | Solar Consultant Delhi',
+                    about: 'About - Lalit Kaushik | MNRE Empanelled Chartered Engineer',
+                    services: 'Engineering Services - Solar, Structural, PMC | Lalit Kaushik',
+                    pricing: 'Service Pricing - Transparent Fees | Lalit Kaushik CE',
+                    contact: 'Contact - Request Quote | Lalit Kaushik Chartered Engineer'
+                };
+                document.title = titles[page] || titles.home;
+            }, [data, page]);
+            
+            const updateData = (key, value) => setData(prev => ({ ...prev, [key]: value }));
+            
+            const contextValue = {
+                ...data, updateData, page, setPage,
+                isAdmin, setIsAdmin, adminLoggedIn, setAdminLoggedIn,
+                selectedService, setSelectedService,
+                showEnquiryModal, setShowEnquiryModal
+            };
+            
+            return (
+                <AppContext.Provider value={contextValue}>
+                    <GlobalStyles />
+                    {isAdmin ? (adminLoggedIn ? <AdminPanel /> : <AdminLogin />) : <PublicWebsite />}
+                    {showEnquiryModal && <EnquiryModal />}
+                </AppContext.Provider>
+            );
+        }
+        
+        // ==================== GLOBAL STYLES ====================
+        const GlobalStyles = () => {
+            const { config } = useApp();
+            return (
+                <style>{`
+                    :root { 
+                        --primary: ${config.colors.primary}; 
+                        --secondary: ${config.colors.secondary}; 
+                        --neutral: ${config.colors.neutral}; 
+                    }
+                    h1,h2,h3,h4,h5,h6 { font-family: 'Inter', sans-serif; font-weight: 700; color: var(--primary); letter-spacing: -0.02em; }
+                    .btn { padding: 14px 28px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.25s; display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-family: 'Inter', sans-serif; }
+                    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+                    .btn-primary { background: var(--secondary); color: var(--primary); }
+                    .btn-secondary { background: var(--primary); color: white; }
+                    .btn-outline { background: white; color: var(--primary); border: 2px solid var(--primary); }
+                    .card { background: white; border-radius: 12px; padding: 32px; box-shadow: 0 4px 16px rgba(26,26,46,0.08); transition: all 0.3s; border: 1px solid #E1E8ED; }
+                    .card:hover { box-shadow: 0 8px 24px rgba(26,26,46,0.12); transform: translateY(-4px); border-color: var(--secondary); }
+                    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+                    input, textarea, select { width: 100%; padding: 14px 18px; border: 2px solid #E1E8ED; border-radius: 6px; font-family: 'Inter', sans-serif; font-size: 15px; transition: all 0.15s; }
+                    input:focus, textarea:focus, select:focus { outline: none; border-color: var(--secondary); box-shadow: 0 0 0 3px rgba(212,175,55,0.1); }
+                    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+                    table { width: 100%; border-collapse: collapse; }
+                    th { padding: 16px; text-align: left; border-bottom: 2px solid #E1E8ED; font-weight: 700; background: var(--neutral); font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; }
+                    td { padding: 16px; border-bottom: 1px solid #E1E8ED; }
+                    .toggle { position: relative; width: 52px; height: 28px; background: #ccc; border-radius: 14px; cursor: pointer; transition: all 0.3s; display: inline-block; }
+                    .toggle.active { background: var(--primary); }
+                    .toggle::after { content: ''; position: absolute; width: 24px; height: 24px; background: white; border-radius: 50%; top: 2px; left: 2px; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+                    .toggle.active::after { left: 26px; }
+                    @media (max-width: 768px) { .grid-3 { grid-template-columns: 1fr; } }
+                `}</style>
+            );
+        };
+
+        // ==================== UTILITY FUNCTIONS ====================
+        const formatPrice = (pricing) => {
+            if (!pricing) return "Request Quote";
+            switch(pricing.type) {
+                case 'fixed': return `₹ ${pricing.amount.toLocaleString('en-IN')}`;
+                case 'range': return `₹ ${pricing.min.toLocaleString('en-IN')} - ₹ ${pricing.max.toLocaleString('en-IN')}`;
+                case 'percentage': return `${pricing.percentage}% of Project Value`;
+                case 'quote': return "Request Quote";
+                default: return "Request Quote";
+            }
+        };
+        
+        // ==================== ENQUIRY MODAL ====================
+        const EnquiryModal = () => {
+            const { setShowEnquiryModal, selectedService, enquiries, updateData, config } = useApp();
+            const [form, setForm] = useState({
+                companyName: '',
+                contactPerson: '',
+                designation: '',
+                mobile: '',
+                email: '',
+                workAddress: '',
+                serviceRequired: selectedService?.name || '',
+                requirement: '',
+                timeline: ''
+            });
+            const [submitted, setSubmitted] = useState(true);
+            
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                const newEnquiry = {
+                    id: Date.now(),
+                    ...form,
+                    date: new Date().toISOString(),
+                    status: 'New'
+                };
+                updateData('enquiries', [...enquiries, newEnquiry]);
+                setSubmitted(true);
+                setTimeout(() => {
+                    setShowEnquiryModal(false);
+                    setSubmitted(false);
+                }, 2000);
+            };
+            
+            if (submitted) {
+                return (
+                    <div className="modal-overlay">
+                        <div className="modal-content" style={{ maxWidth: '500px', textAlign: 'center' }}>
+                            <div style={{ fontSize: '72px', marginBottom: '20px' }}>✅</div>
+                            <h2 style={{ fontSize: '28px', marginBottom: '12px' }}>Thank You!</h2>
+                            <p style={{ fontSize: '16px', color: '#636E72' }}>We've received your enquiry. We'll contact you within 24 hours.</p>
+                        </div>
+                    </div>
+                );
+            }
+            
+            return (
+                <div className="modal-overlay" onClick={() => setShowEnquiryModal(true)}>
+                    <div className="modal-content" onClick={e => e.stopPropagation()}>
+                        <button className="modal-close" onClick={() => setShowEnquiryModal(true)}>×</button>
+                        
+                        <div style={{ marginBottom: '32px' }}>
+                            <div style={{ fontSize: '48px', marginBottom: '16px' }}>📋</div>
+                            <h2 style={{ fontSize: '32px', marginBottom: '8px' }}>Request a Quote</h2>
+                            <p style={{ color: '#636E72' }}>Fill out the form and we'll get back to you with a customized quote</p>
+                        </div>
+                        
+                        <form onSubmit={handleSubmit}>
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px' }}>
+                                <div>
+                                    <label style={{ display: 'block', marginBottom: '6px', fontWeight: 600, fontSize: '14px', color: 'var(--primary)' }}>Company Name *</label>
+                                    <input type="text" value={form.companyName} onChange={e => setForm({...form, companyName: e.target.value})} required />
+                                </div>
+                                <div>
+                                    <label style={{ display: 'block', marginBottom: '6px', fontWeight: 600, fontSize: '14px', color: 'var(--primary)' }}>Contact Person *</label>
+                                    <input type="text" value={form.contactPerson} onChange={e => setForm({...form, contactPerson: e.target.value})} required />
+                                </div>
+                            </div>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '16px' }}>
+                                <div>
+                                    <label style={{ display: 'block', marginBottom: '6px', fontWeight: 600, fontSize: '14px', color: 'var(--primary)' }}>Designation</label>
+                                    <input type="text" value={form.designation} onChange={e => setForm({...form, designation: e.target.value})} />
+                                </div>
+                                <div>
+                                    <label style={{ display: 'block', marginBottom: '6px', fontWeight: 600, fontSize: '14px', color: 'var(--primary)' }}>Mobile *</label>
+                                    <input type="tel" pattern="[0-9]{10}" value={form.mobile} onChange={e => setForm({...form, mobile: e.target.value})} required />
+                                </div>
+                            </div>
+                            
+                            <div style={{ marginBottom: '16px' }}>
+                                <label style={{ display: 'block', marginBottom: '6px', fontWeight: 600, fontSize: '14px', color: 'var(--primary)' }}>Email *</label>
+                                <input type="email" value={form.email} onChange={e => setForm({...form, email: e.target.value})} required />
+                            </div>
+                            
+                            <div style={{ marginBottom: '16px' }}>
+                                <label style={{ display: 'block', marginBottom: '6px', fontWeight: 600, fontSize: '14px', color: 'var(--primary)' }}>Work Address</label>
+                                <textarea rows="2" value={form.workAddress} onChange={e => setForm({...form, workAddress: e.target.value})} />
+                            </div>
+                            
+                            <div style={{ marginBottom: '16px' }}>
+                                <label style={{ display: 'block', marginBottom: '6px', fontWeight: 600, fontSize: '14px', color: 'var(--primary)' }}>Service Required *</label>
+                                <input type="text" value={form.serviceRequired} onChange={e => setForm({...form, serviceRequired: e.target.value})} required />
+                            </div>
+                            
+                            <div style={{ marginBottom: '16px' }}>
+                                <label style={{ display: 'block', marginBottom: '6px', fontWeight: 600, fontSize: '14px', color: 'var(--primary)' }}>Brief Requirement *</label>
+                                <textarea rows="4" placeholder="Please describe your project requirements..." value={form.requirement} onChange={e => setForm({...form, requirement: e.target.value})} required />
+                            </div>
+                            
+                            <div style={{ marginBottom: '24px' }}>
+                                <label style={{ display: 'block', marginBottom: '6px', fontWeight: 600, fontSize: '14px', color: 'var(--primary)' }}>Timeline *</label>
+                                <select value={form.timeline} onChange={e => setForm({...form, timeline: e.target.value})} required>
+                                    <option value="">-- Select Timeline --</option>
+                                    <option value="Urgent (Within 1 week)">Urgent (Within 1 week)</option>
+                                    <option value="Within 2 weeks">Within 2 weeks</option>
+                                    <option value="Within 1 month">Within 1 month</option>
+                                    <option value="1-3 months">1-3 months</option>
+                                    <option value="Flexible">Flexible</option>
+                                </select>
+                            </div>
+                            
+                            <div style={{ display: 'flex', gap: '12px' }}>
+                                <button type="submit" className="btn btn-primary" style={{ flex: 1 }}>Submit Enquiry</button>
+                                <button type="button" className="btn btn-outline" onClick={() => setShowEnquiryModal(true)}>Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            );
+        };
+        
+        // ==================== ADMIN LOGIN ====================
+        const AdminLogin = () => {
+            const { setAdminLoggedIn } = useApp();
+            const [password, setPassword] = useState('');
+            const [error, setError] = useState('');
+            
+            const handleLogin = (e) => {
+                e.preventDefault();
+                if (password === 'LaLit@CE2024') {
+                    setAdminLoggedIn(true);
+                } else {
+                    setError('Invalid password');
+                }
+            };
+            
+            return (
+                <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #1A1A2E 0%, #16161F 100%)' }}>
+                    <div style={{ background: 'white', padding: '48px', borderRadius: '12px', maxWidth: '420px', width: '100%', boxShadow: '0 20px 60px rgba(0,0,0,0.3)', borderTop: '4px solid var(--secondary)' }}>
+                        <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+                            <div style={{ fontSize: '64px', marginBottom: '16px' }}>🔐</div>
+                            <h2 style={{ fontSize: '28px', marginBottom: '8px' }}>Admin Panel</h2>
+                            <p style={{ color: '#636E72' }}>Lalit Kaushik - Chartered Engineer</p>
+                        </div>
+                        
+                        {error && <div style={{ background: '#FFEBEE', color: '#C62828', padding: '12px', borderRadius: '6px', marginBottom: '20px', borderLeft: '4px solid #C62828' }}>⚠️ {error}</div>}
+                        
+                        <form onSubmit={handleLogin}>
+                            <div style={{ marginBottom: '24px' }}>
+                                <label style={{ display: 'block', marginBottom: '8px', fontWeight: 600, color: 'var(--primary)' }}>Admin Password</label>
+                                <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Enter password" required />
+                            </div>
+                            <button type="submit" className="btn btn-primary" style={{ width: '100%', fontSize: '16px' }}>Login to Dashboard</button>
+                        </form>
+                        
+                        <div style={{ marginTop: '24px', textAlign: 'center' }}>
+                            <a href="#" onClick={e => { e.preventDefault(); window.location.reload(); }} style={{ color: 'var(--primary)', fontSize: '14px' }}>← Back to Website</a>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+        
+        // ==================== PUBLIC WEBSITE ====================
+        const PublicWebsite = () => {
+            return (
+                <>
+                    <Header />
+                    <Navigation />
+                    <PageContent />
+                    <Footer />
+                </>
+            );
+        };
+        
+        // ==================== HEADER ====================
+        const Header = () => {
+            const { config } = useApp();
+            return (
+                <header style={{ background: 'var(--primary)', color: 'white', borderBottom: '1px solid rgba(212,175,55,0.1)' }}>
+                    <div className="container" style={{ padding: '24px 24px' }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'center', gap: '32px' }}>
+                            <div>
+                                <h1 style={{ color: 'white', fontSize: '32px', fontWeight: 700, margin: 0 }}>{config.siteName}</h1>
+                                <p style={{ color: 'var(--secondary)', fontSize: '14px', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '0.1em', margin: '8px 0 0' }}>{config.subtitle}</p>
+                                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '14px', margin: '4px 0 0' }}>{config.credentials}</p>
+                            </div>
+                            <div style={{ display: 'flex', gap: '32px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <span style={{ fontSize: '24px' }}>📞</span>
+                                    <div>
+                                        <strong style={{ display: 'block', fontSize: '11px', color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Mobile</strong>
+                                        <p style={{ margin: 0, fontSize: '16px', fontWeight: 500 }}>{config.contact.mobile}</p>
+                                    </div>
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                                    <span style={{ fontSize: '24px' }}>✉️</span>
+                                    <div>
+                                        <strong style={{ display: 'block', fontSize: '11px', color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Email</strong>
+                                        <p style={{ margin: 0, fontSize: '16px', fontWeight: 500 }}>{config.contact.email}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            );
+        };
+        
+        // ==================== NAVIGATION ====================
+        const Navigation = () => {
+    const { page, setPage, setIsAdmin } = useApp(); // 1. Call hooks at the top level
+    
+    const navItems = [
+        { id: 'home', label: 'Home' },
+        { id: 'about', label: 'About / Credentials' },
+        { id: 'services', label: 'Services' },
+        { id: 'pricing', label: 'Price List' },
+        { id: 'contact', label: 'Contact' }
+    ];
+
+    const handleAdminClick = (e) => {
+        e.preventDefault();
+        window.location.hash = 'admin';
+        setIsAdmin(true); // 2. Now properly accessible
+    };
+    
+    return (
+        <nav style={{ background: 'white', borderBottom: '1px solid #E1E8ED', position: 'sticky', top: 0, zIndex: 100, boxShadow: '0 1px 3px rgba(26,26,46,0.06)' }}>
+            <div className="container" style={{ display: 'flex', gap: '0' }}>
+                {navItems.map(item => (
+                    <button
+                        key={item.id}
+                        onClick={() => setPage(item.id)}
+                        style={{
+                            background: 'transparent',
+                            border: 'none',
+                            padding: '18px 24px',
+                            cursor: 'pointer',
+                            fontSize: '14px',
+                            fontWeight: 500,
+                            color: page === item.id ? 'var(--primary)' : '#2D3436',
+                            borderBottom: page === item.id ? '3px solid var(--secondary)' : '3px solid transparent',
+                            transition: 'all 0.25s'
+                        }}
+                    >
+                        {item.label}
+                    </button>
+                ))}
+                <div style={{ marginLeft: 'auto', padding: '12px 0' }}>
+                    {/* 3. Use the single, combined handler here */}
+                    <button onClick={handleAdminClick} className="btn btn-outline" style={{ padding: '8px 16px', fontSize: '13px' }}>
+                        Admin Login
+                    </button>
+                </div>
+            </div>
+        </nav>
+    );
+};
+        
+        // ==================== PAGE CONTENT ====================
+        const PageContent = () => {
+            const { page } = useApp();
+            switch(page) {
+                case 'home': return <HomePage />;
+                case 'about': return <AboutPage />;
+                case 'services': return <ServicesPage />;
+                case 'pricing': return <PricingPage />;
+                case 'contact': return <ContactPage />;
+                default: return <HomePage />;
+            }
+        };
+        
+        // ==================== HOME PAGE ====================
+        const HomePage = () => {
+            const { config, services, setPage, setSelectedService, setShowEnquiryModal } = useApp();
+            const enabledServices = services.filter(s => s.enabled).slice(0, 6);
+            
+            return (
+                <>
+                    {/* Hero */}
+                    <section style={{ background: 'linear-gradient(135deg, #1A1A2E 0%, #16161F 100%)', position: 'relative', overflow: 'hidden' }}>
+                        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'radial-gradient(circle at 30% 50%, rgba(212,175,55,0.05) 0%, transparent 50%)' }} />
+                        <div className="container" style={{ position: 'relative', zIndex: 1, textAlign: 'center', padding: '80px 24px', maxWidth: '900px' }}>
+                            <h2 style={{ color: 'white', fontSize: '42px', fontWeight: 700, marginBottom: '16px' }}>Professional Engineering Consultancy Services</h2>
+                            <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.85)', marginBottom: '40px', lineHeight: 1.6 }}>MNRE Empanelled Chartered Engineer with Expertise in Solar, Structural Design & Project Management</p>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '24px', margin: '48px 0' }}>
+                                <div style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(10px)', border: '1px solid rgba(212,175,55,0.2)', padding: '32px', borderRadius: '12px' }}>
+                                    <div style={{ fontSize: '48px', marginBottom: '16px' }}>🎓</div>
+                                    <h3 style={{ color: 'var(--secondary)', fontSize: '20px', marginBottom: '8px' }}>B.Tech + MBA</h3>
+                                    <p style={{ color: 'rgba(255,255,255,0.75)', margin: 0, fontSize: '14px' }}>Mechanical Engineering & Consulting</p>
+                                </div>
+                                <div style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(10px)', border: '1px solid rgba(212,175,55,0.2)', padding: '32px', borderRadius: '12px' }}>
+                                    <div style={{ fontSize: '48px', marginBottom: '16px' }}>✅</div>
+                                    <h3 style={{ color: 'var(--secondary)', fontSize: '20px', marginBottom: '8px' }}>MNRE Empanelled</h3>
+                                    <p style={{ color: 'rgba(255,255,255,0.75)', margin: 0, fontSize: '14px' }}>Ministry Recognized Expert</p>
+                                </div>
+                                <div style={{ background: 'rgba(255,255,255,0.05)', backdropFilter: 'blur(10px)', border: '1px solid rgba(212,175,55,0.2)', padding: '32px', borderRadius: '12px' }}>
+                                    <div style={{ fontSize: '48px', marginBottom: '16px' }}>⚡</div>
+                                    <h3 style={{ color: 'var(--secondary)', fontSize: '20px', marginBottom: '8px' }}>Solar Specialist</h3>
+                                    <p style={{ color: 'rgba(255,255,255,0.75)', margin: 0, fontSize: '14px' }}>Renewable Energy Consultant</p>
+                                </div>
+                            </div>
+                            
+                            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '32px' }}>
+                                <button onClick={() => setPage('services')} className="btn btn-primary">Our Services</button>
+                                <button onClick={() => setPage('contact')} className="btn btn-secondary" style={{ background: 'white', color: 'var(--primary)' }}>Request Quote</button>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    {/* Services Overview */}
+                    <section style={{ background: 'white', padding: '80px 0' }}>
+                        <div className="container">
+                            <h2 style={{ textAlign: 'center', fontSize: '38px', marginBottom: '12px' }}>Our Core Services</h2>
+                            <p style={{ textAlign: 'center', color: '#636E72', fontSize: '18px', marginBottom: '48px', maxWidth: '700px', margin: '0 auto 48px' }}>Comprehensive Engineering Solutions - Online & Offline</p>
+                            
+                            <div className="grid-3">
+                                {enabledServices.map(service => (
+                                    <div key={service.id} className="card">
+                                        <span style={{ fontSize: '48px', display: 'block', marginBottom: '16px' }}>{service.icon}</span>
+                                        <h3 style={{ fontSize: '20px', marginBottom: '12px' }}>{service.name}</h3>
+                                        <p style={{ color: '#636E72', marginBottom: '20px', lineHeight: 1.6 }}>{service.description}</p>
+                                        <button onClick={() => { setSelectedService(service); setShowEnquiryModal(true); }} className="btn btn-outline" style={{ width: '100%' }}>Request Quote</button>
+                                    </div>
+                                ))}
+                            </div>
+                            
+                            <div style={{ textAlign: 'center', marginTop: '40px' }}>
+                                <button onClick={() => setPage('services')} className="btn btn-outline">View All Services</button>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    {/* Why Choose Us */}
+                    <section style={{ background: 'var(--neutral)', padding: '80px 0' }}>
+                        <div className="container">
+                            <h2 style={{ textAlign: 'center', fontSize: '38px', marginBottom: '48px' }}>Why Choose Us</h2>
+                            
+                            <div className="grid-3">
+                                {[
+                                    { icon: '🏆', title: 'Government Recognized', text: 'MNRE Empanelled Chartered Engineer with official credentials for government and private projects' },
+                                    { icon: '💼', title: 'Experienced Consultant', text: 'B.Tech (Mechanical) + MBA (Consulting) with extensive industry experience' },
+                                    { icon: '📋', title: 'Comprehensive Services', text: 'From solar consultancy to structural vetting and project management' },
+                                    { icon: '🌐', title: 'Flexible Delivery', text: 'Both online and offline services available across India' },
+                                    { icon: '⚡', title: 'Quick Turnaround', text: 'Efficient project execution with timely delivery' },
+                                    { icon: '💯', title: 'Quality Assurance', text: 'Professional reports and certifications meeting all standards' }
+                                ].map((item, i) => (
+                                    <div key={i} className="card">
+                                        <div style={{ fontSize: '48px', marginBottom: '16px' }}>{item.icon}</div>
+                                        <h3 style={{ fontSize: '20px', marginBottom: '12px' }}>{item.title}</h3>
+                                        <p style={{ color: '#636E72', margin: 0 }}>{item.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+                    
+                    {/* Location */}
+                    <section style={{ background: 'white', padding: '80px 0' }}>
+                        <div className="container">
+                            <h2 style={{ textAlign: 'center', fontSize: '38px', marginBottom: '48px' }}>Visit Our Office</h2>
+                            
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px' }}>
+                                <div>
+                                    <h3 style={{ fontSize: '24px', marginBottom: '16px' }}>Office Address</h3>
+                                    <p style={{ fontSize: '18px', lineHeight: 1.8, color: '#636E72', marginBottom: '24px' }}>
+                                        {config.contact.address}<br/>
+                                        {config.contact.landmark}
+                                    </p>
+                                    
+                                    <div style={{ background: 'var(--neutral)', padding: '24px', borderRadius: '8px', borderLeft: '4px solid var(--secondary)', marginBottom: '24px' }}>
+                                        <h4 style={{ marginBottom: '12px' }}>Nearby Metro Stations:</h4>
+                                        <p style={{ color: '#636E72', margin: 0 }}>{config.contact.metro}</p>
+                                    </div>
+                                    
+                                    <div style={{ background: 'var(--primary)', color: 'white', padding: '24px', borderRadius: '8px', boxShadow: '0 4px 12px rgba(26,26,46,0.08)' }}>
+                                        <div style={{ paddingBottom: '16px', marginBottom: '16px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
+                                            <strong style={{ color: 'var(--secondary)' }}>Mobile:</strong> {config.contact.mobile}
+                                        </div>
+                                        <div>
+                                            <strong style={{ color: 'var(--secondary)' }}>Email:</strong> {config.contact.email}
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <iframe 
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.8!2d77.2957!3d28.7041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDQyJzE0LjgiTiA3N8KwMTcnNDQuNSJF!5e0!3m2!1sen!2sin!4v1234567890"
+                                        width="100%" 
+                                        height="450" 
+                                        style={{ border: 0, borderRadius: '12px', boxShadow: '0 8px 24px rgba(26,26,46,0.12)' }}
+                                        allowFullScreen="" 
+                                        loading="lazy">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </>
+            );
+        };
+        
+        // ==================== ABOUT PAGE ====================
+        const AboutPage = () => {
+            const { config } = useApp();
+            return (
+                <div style={{ background: 'white', minHeight: '100vh' }}>
+                    {/* Page Header */}
+                    <section style={{ background: 'var(--primary)', padding: '64px 0', textAlign: 'center', borderBottom: '4px solid var(--secondary)' }}>
+                        <div className="container">
+                            <h1 style={{ color: 'white', fontSize: '42px', marginBottom: '12px' }}>About Lalit Kaushik</h1>
+                            <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.8)', margin: 0 }}>Professional Credentials & Expertise</p>
+                        </div>
+                    </section>
+                    
+                    <div className="container" style={{ padding: '64px 24px' }}>
+                        {/* Intro */}
+                        <div style={{ maxWidth: '900px', margin: '0 auto 64px', textAlign: 'center' }}>
+                            <h2 style={{ fontSize: '32px', marginBottom: '24px' }}>Chartered Engineer & Consultant</h2>
+                            <p style={{ fontSize: '18px', lineHeight: 1.8, color: '#636E72' }}>{config.about.intro}</p>
+                        </div>
+                        
+                        {/* Qualifications */}
+                        <div style={{ marginBottom: '64px' }}>
+                            <h2 style={{ textAlign: 'center', fontSize: '32px', marginBottom: '32px' }}>Educational Qualifications</h2>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '24px' }}>
+                                {config.about.education.map((edu, i) => (
+                                    <div key={i} style={{ background: 'var(--neutral)', padding: '32px', borderRadius: '12px', borderLeft: '4px solid var(--secondary)' }}>
+                                        <div style={{ fontSize: '48px', marginBottom: '16px' }}>🎓</div>
+                                        <h3 style={{ fontSize: '20px', marginBottom: '12px' }}>{edu}</h3>
+                                        <p style={{ color: '#636E72', margin: 0 }}>
+                                            {i === 0 ? 'Comprehensive foundation in mechanical engineering principles, thermal systems, structural mechanics, and industrial processes' : 'Advanced management education specializing in consulting practices, project management, and business strategy'}
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        
+                        {/* Credentials */}
+                        <div style={{ marginBottom: '64px' }}>
+                            <h2 style={{ textAlign: 'center', fontSize: '32px', marginBottom: '32px' }}>Professional Credentials</h2>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '24px' }}>
+                                {[
+                                    { icon: '⚡', title: 'MNRE Empanelled Chartered Engineer', desc: 'Officially empanelled with the Ministry of New and Renewable Energy, Government of India, authorized to provide expert consultancy for solar and renewable energy projects' },
+                                    { icon: '☀️', title: 'Solar Consultant', desc: 'Specialized expertise in solar power project design, feasibility studies, technical audits, and renewable energy implementation' },
+                                    { icon: '🏗️', title: 'Structural Design Expert', desc: 'Qualified to provide structural design, vetting, and certification services for industrial and commercial projects' }
+                                ].map((cred, i) => (
+                                    <div key={i} className="card" style={{ background: 'linear-gradient(135deg, rgba(26,26,46,0.05) 0%, rgba(212,175,55,0.05) 100%)', borderLeft: '4px solid var(--primary)' }}>
+                                        <div style={{ fontSize: '48px', marginBottom: '16px' }}>{cred.icon}</div>
+                                        <h3 style={{ fontSize: '20px', marginBottom: '12px' }}>{cred.title}</h3>
+                                        <p style={{ color: '#636E72', margin: 0 }}>{cred.desc}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        
+                        {/* Expertise Areas */}
+                        <div style={{ marginBottom: '64px' }}>
+                            <h2 style={{ textAlign: 'center', fontSize: '32px', marginBottom: '32px' }}>Areas of Expertise</h2>
+                            <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+                                {[
+                                    { title: 'Solar Energy Systems', text: 'Solar PV design, rooftop solar consultancy, ground-mounted systems, capacity calculations, and MNRE compliance' },
+                                    { title: 'Structural Engineering', text: 'Structural design and analysis, load calculations, foundation design, structural vetting and certification' },
+                                    { title: 'Design Vetting Services', text: 'Third-party review of structural designs, thermal designs, electrical systems, and technical calculations' },
+                                    { title: 'Project Management', text: 'PMC services, pre-bid consultancy, project planning, quality assurance, and project execution oversight' },
+                                    { title: 'Third-Party Inspection', text: 'Independent inspection and certification of plant and machinery for compliance and quality standards' },
+                                    { title: 'Technical Consultancy', text: 'Feasibility studies, technical audits, capacity assessments, and engineering advisory services' }
+                                ].map((area, i) => (
+                                    <div key={i} style={{ display: 'flex', gap: '16px', padding: '24px', background: 'white', marginBottom: '16px', borderRadius: '12px', boxShadow: '0 4px 16px rgba(26,26,46,0.08)', border: '1px solid #E1E8ED' }}>
+                                        <span style={{ color: 'var(--secondary)', fontSize: '24px', fontWeight: 'bold', flexShrink: 0 }}>✓</span>
+                                        <div>
+                                            <h4 style={{ fontSize: '18px', marginBottom: '8px' }}>{area.title}</h4>
+                                            <p style={{ color: '#636E72', margin: 0 }}>{area.text}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        
+                        {/* CTA */}
+                        <div style={{ textAlign: 'center', background: 'var(--neutral)', padding: '48px', borderRadius: '12px' }}>
+                            <h2 style={{ fontSize: '32px', marginBottom: '16px' }}>Ready to Discuss Your Project?</h2>
+                            <p style={{ fontSize: '18px', color: '#636E72', marginBottom: '32px' }}>Get professional engineering consultancy backed by MNRE credentials and extensive expertise</p>
+                            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
+                                <button onClick={() => useApp().setPage('services')} className="btn btn-primary">View Services</button>
+                                <button onClick={() => useApp().setPage('contact')} className="btn btn-secondary">Request Consultation</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+        
+        // ==================== SERVICES PAGE ====================
+        const ServicesPage = () => {
+            const { services, setSelectedService, setShowEnquiryModal } = useApp();
+            const enabledServices = services.filter(s => s.enabled);
+            
+            return (
+                <div style={{ background: 'white', minHeight: '100vh' }}>
+                    <section style={{ background: 'var(--primary)', padding: '64px 0', textAlign: 'center', borderBottom: '4px solid var(--secondary)' }}>
+                        <div className="container">
+                            <h1 style={{ color: 'white', fontSize: '42px', marginBottom: '12px' }}>Our Services</h1>
+                            <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.8)', margin: 0 }}>Comprehensive Engineering Solutions - Online & Offline</p>
+                        </div>
+                    </section>
+                    
+                    <div className="container" style={{ padding: '64px 24px' }}>
+                        <div style={{ maxWidth: '900px', margin: '0 auto 48px', textAlign: 'center' }}>
+                            <p style={{ fontSize: '18px', lineHeight: 1.8, color: '#636E72' }}>We offer a complete range of engineering consultancy services for government, private, and industrial clients across India. All services are delivered by MNRE empanelled professionals with certifications meeting Indian Standards and regulatory requirements.</p>
+                        </div>
+                        
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '24px', marginBottom: '48px' }}>
+                            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px', background: 'var(--neutral)', padding: '24px', borderRadius: '12px', borderLeft: '4px solid var(--secondary)' }}>
+                                <span style={{ fontSize: '32px', flexShrink: 0 }}>💻</span>
+                                <div>
+                                    <h3 style={{ fontSize: '18px', marginBottom: '8px' }}>Online Services</h3>
+                                    <p style={{ color: '#636E72', margin: 0 }}>Remote consultancy with digital documentation, virtual meetings, and email support</p>
+                                </div>
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px', background: 'var(--neutral)', padding: '24px', borderRadius: '12px', borderLeft: '4px solid var(--secondary)' }}>
+                                <span style={{ fontSize: '32px', flexShrink: 0 }}>🏢</span>
+                                <div>
+                                    <h3 style={{ fontSize: '18px', marginBottom: '8px' }}>Offline Services</h3>
+                                    <p style={{ color: '#636E72', margin: 0 }}>On-site visits, physical inspections, and in-person consultations available</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style={{ marginBottom: '48px' }}>
+                            {enabledServices.map(service => (
+                                <div key={service.id} className="card" style={{ marginBottom: '24px' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px', paddingBottom: '16px', borderBottom: '2px solid var(--neutral)' }}>
+                                        <span style={{ fontSize: '40px' }}>{service.icon}</span>
+                                        <h3 style={{ fontSize: '24px', margin: 0 }}>{service.name}</h3>
+                                    </div>
+                                    <p style={{ color: '#636E72', marginBottom: '16px', lineHeight: 1.7 }}>{service.description}</p>
+                                    <p style={{ color: '#636E72', marginBottom: '20px', lineHeight: 1.7 }}>{service.details}</p>
+                                    <div style={{ background: 'var(--neutral)', padding: '16px', borderRadius: '8px', marginBottom: '20px' }}>
+                                        <strong style={{ color: 'var(--primary)' }}>Indicative Price:</strong>{' '}
+                                        <span style={{ color: 'var(--secondary)', fontSize: '18px', fontWeight: 700, marginLeft: '8px' }}>{formatPrice(service.pricing)}</span>
+                                    </div>
+                                    <button onClick={() => { setSelectedService(service); setShowEnquiryModal(true); }} className="btn btn-primary">Request Quote</button>
+                                </div>
+                            ))}
+                        </div>
+                        
+                        <div style={{ textAlign: 'center', background: 'var(--neutral)', padding: '48px', borderRadius: '12px' }}>
+                            <h2 style={{ fontSize: '28px', marginBottom: '16px' }}>Need a Custom Quote?</h2>
+                            <p style={{ fontSize: '18px', color: '#636E72', marginBottom: '32px' }}>Every project is unique. Contact us for a detailed consultation and customized pricing based on your specific requirements.</p>
+                            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center' }}>
+                                <button onClick={() => useApp().setPage('pricing')} className="btn btn-primary">View Pricing</button>
+                                <button onClick={() => useApp().setPage('contact')} className="btn btn-secondary">Request Quote</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+        
+        // ==================== PRICING PAGE ====================
+        const PricingPage = () => {
+            const { services, disclaimer, setSelectedService, setShowEnquiryModal } = useApp();
+            
+            return (
+                <div style={{ background: 'white', minHeight: '100vh' }}>
+                    <section style={{ background: 'var(--primary)', padding: '64px 0', textAlign: 'center', borderBottom: '4px solid var(--secondary)' }}>
+                        <div className="container">
+                            <h1 style={{ color: 'white', fontSize: '42px', marginBottom: '12px' }}>Service Pricing</h1>
+                            <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.8)', margin: 0 }}>Transparent and Competitive Fee Structure</p>
+                        </div>
+                    </section>
+                    
+                    <div className="container" style={{ padding: '64px 24px' }}>
+                        <div style={{ maxWidth: '900px', margin: '0 auto 48px', textAlign: 'center' }}>
+                            <p style={{ fontSize: '18px', lineHeight: 1.8, color: '#636E72' }}>We believe in transparent pricing. Below are indicative charges for our services. Final fees are customized based on project scope, complexity, and requirements.</p>
+                        </div>
+                        
+                        <div style={{ overflow: 'auto', marginBottom: '48px', boxShadow: '0 4px 12px rgba(26,26,46,0.08)', borderRadius: '12px', border: '1px solid #E1E8ED' }}>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Service</th>
+                                        <th>Description</th>
+                                        <th>Indicative Price</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {services.filter(s => s.enabled).map(service => (
+                                        <tr key={service.id} style={{ background: 'white', transition: '0.15s' }}>
+                                            <td><strong>{service.icon} {service.name}</strong></td>
+                                            <td>{service.description}</td>
+                                            <td><span style={{ fontWeight: 700, color: 'var(--secondary)', fontSize: '16px' }}>{formatPrice(service.pricing)}</span></td>
+                                            <td><button onClick={() => { setSelectedService(service); setShowEnquiryModal(true); }} className="btn btn-primary" style={{ padding: '10px 20px', fontSize: '14px' }}>Request Quote</button></td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div style={{ background: '#FFF9E6', border: '2px solid var(--secondary)', borderRadius: '12px', padding: '32px', marginBottom: '48px' }}>
+                            <h3 style={{ fontSize: '20px', marginBottom: '16px' }}>Important Notice</h3>
+                            <p style={{ color: 'var(--primary)', margin: 0, lineHeight: 1.7 }}>{disclaimer}</p>
+                        </div>
+                        
+                        <div className="grid-3" style={{ marginBottom: '48px' }}>
+                            {[
+                                { icon: '🎯', title: 'Customized Quotes', text: 'For accurate pricing tailored to your specific project requirements, please request a detailed quote through our contact form.' },
+                                { icon: '⚡', title: 'Urgent Projects', text: 'Rush services available with expedited delivery. Additional charges apply for urgent turnaround requirements.' },
+                                { icon: '📦', title: 'Package Deals', text: 'Bundled services and long-term contracts may qualify for special pricing. Contact us to discuss volume discounts.' },
+                                { icon: '💳', title: 'Payment Terms', text: 'Flexible payment options available. Advance payment required for certain services. GST applicable as per regulations.' }
+                            ].map((item, i) => (
+                                <div key={i} style={{ background: 'var(--neutral)', padding: '32px', borderRadius: '12px', textAlign: 'center', border: '1px solid #E1E8ED' }}>
+                                    <div style={{ fontSize: '40px', marginBottom: '16px' }}>{item.icon}</div>
+                                    <h3 style={{ fontSize: '18px', marginBottom: '12px' }}>{item.title}</h3>
+                                    <p style={{ color: '#636E72', margin: 0 }}>{item.text}</p>
+                                </div>
+                            ))}
+                        </div>
+                        
+                        <div style={{ textAlign: 'center', background: 'var(--neutral)', padding: '48px', borderRadius: '12px' }}>
+                            <h2 style={{ fontSize: '28px', marginBottom: '16px' }}>Ready to Get Started?</h2>
+                            <p style={{ fontSize: '18px', color: '#636E72', marginBottom: '32px' }}>Request a detailed quote for your specific project requirements</p>
+                            <button onClick={() => useApp().setPage('contact')} className="btn btn-primary">Request Custom Quote</button>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+        
+        // ==================== CONTACT PAGE ====================
+        const ContactPage = () => {
+            const { config, setShowEnquiryModal } = useApp();
+            
+            return (
+                <div style={{ background: 'white', minHeight: '100vh' }}>
+                    <section style={{ background: 'var(--primary)', padding: '64px 0', textAlign: 'center', borderBottom: '4px solid var(--secondary)' }}>
+                        <div className="container">
+                            <h1 style={{ color: 'white', fontSize: '42px', marginBottom: '12px' }}>Contact Us</h1>
+                            <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.8)', margin: 0 }}>Request a Quote or Schedule a Consultation</p>
+                        </div>
+                    </section>
+                    
+                    <div className="container" style={{ padding: '64px 24px' }}>
+                        <div className="grid-3" style={{ marginBottom: '64px' }}>
+                            <div className="card" style={{ textAlign: 'center' }}>
+                                <div style={{ fontSize: '48px', marginBottom: '16px' }}>📞</div>
+                                <h3 style={{ fontSize: '20px', marginBottom: '16px' }}>Call Us</h3>
+                                <p style={{ color: 'var(--primary)', fontSize: '20px', fontWeight: 600, marginBottom: '8px' }}>+91-{config.contact.mobile}</p>
+                                <p style={{ color: '#636E72', fontSize: '14px', margin: 0 }}>Available Mon-Sat, 9 AM - 6 PM</p>
+                            </div>
+                            <div className="card" style={{ textAlign: 'center' }}>
+                                <div style={{ fontSize: '48px', marginBottom: '16px' }}>✉️</div>
+                                <h3 style={{ fontSize: '20px', marginBottom: '16px' }}>Email Us</h3>
+                                <p style={{ color: 'var(--primary)', fontSize: '18px', fontWeight: 600, marginBottom: '8px' }}>{config.contact.email}</p>
+                                <p style={{ color: '#636E72', fontSize: '14px', margin: 0 }}>We'll respond within 24 hours</p>
+                            </div>
+                            <div className="card" style={{ textAlign: 'center' }}>
+                                <div style={{ fontSize: '48px', marginBottom: '16px' }}>📍</div>
+                                <h3 style={{ fontSize: '20px', marginBottom: '16px' }}>Visit Office</h3>
+                                <p style={{ color: 'var(--primary)', fontSize: '16px', fontWeight: 500, marginBottom: '8px' }}>{config.contact.address}</p>
+                                <p style={{ color: '#636E72', fontSize: '14px', margin: 0 }}>{config.contact.landmark}</p>
+                            </div>
+                        </div>
+                        
+                        <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '48px' }}>
+                            <div className="card" style={{ height: 'fit-content' }}>
+                                <h2 style={{ fontSize: '32px', marginBottom: '12px' }}>Request a Quote</h2>
+                                <p style={{ color: '#636E72', marginBottom: '32px' }}>Fill out the form and we'll get back to you with a customized quote</p>
+                                <button onClick={() => setShowEnquiryModal(true)} className="btn btn-primary" style={{ width: '100%', fontSize: '16px', padding: '18px' }}>📋 Open Quote Request Form</button>
+                            </div>
+                            
+                            <div style={{ background: 'var(--neutral)', padding: '32px', borderRadius: '12px', border: '1px solid #E1E8ED' }}>
+                                <h3 style={{ fontSize: '20px', marginBottom: '24px' }}>Office Location</h3>
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.8!2d77.2957!3d28.7041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDQyJzE0LjgiTiA3N8KwMTcnNDQuNSJF!5e0!3m2!1sen!2sin!4v1234567890"
+                                    width="100%" 
+                                    height="300" 
+                                    style={{ border: 0, borderRadius: '8px', marginBottom: '20px', boxShadow: '0 4px 8px rgba(26,26,46,0.06)' }}
+                                    allowFullScreen="" 
+                                    loading="lazy">
+                                </iframe>
+                                <h4 style={{ fontSize: '16px', marginBottom: '12px' }}>How to Reach</h4>
+                                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                                    <li style={{ padding: '8px 0', color: '#636E72' }}><strong>Metro:</strong> {config.contact.metro}</li>
+                                    <li style={{ padding: '8px 0', color: '#636E72' }}><strong>Landmark:</strong> {config.contact.landmark}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+        
+        // ==================== FOOTER ====================
+        const Footer = () => {
+            const { config, setIsAdmin, setPage } = useApp();
+            return (
+                <footer style={{ background: 'var(--primary)', color: 'white', padding: '64px 0 24px', borderTop: '4px solid var(--secondary)' }}>
+                    <div className="container">
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '48px', marginBottom: '48px' }}>
+                            <div>
+                                <h4 style={{ color: 'var(--secondary)', marginBottom: '16px', fontSize: '18px' }}>Lalit Kaushik</h4>
+                                <p style={{ color: 'rgba(255,255,255,0.85)', marginBottom: '8px' }}>Chartered Engineer (Mechanical)</p>
+                                <p style={{ color: 'rgba(255,255,255,0.85)', marginBottom: '8px' }}>MNRE Empanelled Solar Consultant</p>
+                                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '14px' }}>B.Tech (Mech) | MBA (Consulting)</p>
+                            </div>
+                            <div>
+                                <h4 style={{ color: 'var(--secondary)', marginBottom: '16px', fontSize: '18px' }}>Quick Links</h4>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                    {['home', 'about', 'services', 'pricing', 'contact'].map(p => (
+                                        <a key={p} href="#" onClick={e => { e.preventDefault(); setPage(p); }} style={{ color: 'rgba(255,255,255,0.85)', fontSize: '15px', transition: '0.15s' }}>{p.charAt(0).toUpperCase() + p.slice(1)}</a>
+                                    ))}
+                                </div>
+                            </div>
+                            <div>
+                                <h4 style={{ color: 'var(--secondary)', marginBottom: '16px', fontSize: '18px' }}>Contact</h4>
+                                <p style={{ color: 'rgba(255,255,255,0.85)', marginBottom: '8px', lineHeight: 1.6 }}>{config.contact.address}</p>
+                                <p style={{ color: 'rgba(255,255,255,0.85)', marginBottom: '4px' }}>Mobile: {config.contact.mobile}</p>
+                                <p style={{ color: 'rgba(255,255,255,0.85)' }}>Email: {config.contact.email}</p>
+                            </div>
+                        </div>
+                        <div style={{ textAlign: 'center', paddingTop: '32px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+                            <p style={{ color: 'rgba(255,255,255,0.6)', margin: 0, fontSize: '14px' }}>&copy; 2024 Lalit Kaushik - Chartered Engineer. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </footer>
+            );
+        };
+        
+        // ==================== ADMIN PANEL ====================
+        const AdminPanel = () => {
+            const { setAdminLoggedIn, setIsAdmin } = useApp();
+            const [tab, setTab] = useState('services');
+            
+            return (
+                <div style={{ minHeight: '100vh', background: 'var(--neutral)' }}>
+                    {/* Admin Header */}
+                    <header style={{ background: 'var(--primary)', color: 'white', padding: '24px 32px', boxShadow: '0 4px 12px rgba(26,26,46,0.08)', borderBottom: '4px solid var(--secondary)' }}>
+                        <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <h1 style={{ color: 'white', margin: 0, fontSize: '28px' }}>Admin Dashboard</h1>
+                            <div style={{ display: 'flex', gap: '12px' }}>
+                                <button onClick={() => setAdminLoggedIn(false)} className="btn btn-primary">Logout</button>
+                            </div>
+                        </div>
+                    </header>
+                    
+                    {/* Admin Nav */}
+                    <nav style={{ background: 'white', padding: 0, boxShadow: '0 1px 3px rgba(26,26,46,0.06)', borderBottom: '1px solid #E1E8ED' }}>
+                        <div style={{ maxWidth: '1400px', margin: '0 auto', display: 'flex', gap: 0, overflow: 'auto' }}>
+                            {['services', 'enquiries', 'settings'].map(t => (
+                                <button
+                                    key={t}
+                                    onClick={() => setTab(t)}
+                                    style={{
+                                        background: 'transparent',
+                                        border: 'none',
+                                        padding: '16px 24px',
+                                        cursor: 'pointer',
+                                        fontWeight: 600,
+                                        color: tab === t ? 'var(--primary)' : '#2D3436',
+                                        borderBottom: tab === t ? '3px solid var(--secondary)' : '3px solid transparent',
+                                        transition: '0.15s',
+                                        fontSize: '14px',
+                                        textTransform: 'capitalize'
+                                    }}
+                                >
+                                    {t}
+                                </button>
+                            ))}
+                        </div>
+                    </nav>
+                    
+                    {/* Admin Content */}
+                    <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '32px' }}>
+                        {tab === 'services' && <AdminServices />}
+                        {tab === 'enquiries' && <AdminEnquiries />}
+                        {tab === 'settings' && <AdminSettings />}
+                    </div>
+                </div>
+            );
+        };
+        
+        const AdminServices = () => {
+            const { services, updateData } = useApp();
+            
+            const toggleService = (id) => {
+                updateData('services', services.map(s => s.id === id ? {...s, enabled: !s.enabled} : s));
+            };
+            
+            return (
+                <div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
+                        <h2 style={{ fontSize: '28px', margin: 0 }}>Services Management</h2>
+                    </div>
+                    
+                    <div style={{ background: 'white', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 12px rgba(26,26,46,0.08)', border: '1px solid #E1E8ED' }}>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Category</th>
+                                    <th>Pricing</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {services.map(service => (
+                                    <tr key={service.id}>
+                                        <td><strong>{service.icon} {service.name}</strong></td>
+                                        <td>{service.category}</td>
+                                        <td>{formatPrice(service.pricing)}</td>
+                                        <td><span style={{ padding: '6px 14px', borderRadius: '999px', fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', background: service.enabled ? '#E8F5E9' : '#FFEBEE', color: service.enabled ? '#2E7D32' : '#C62828' }}>{service.enabled ? 'Enabled' : 'Disabled'}</span></td>
+                                        <td>
+                                            <div className={`toggle ${service.enabled ? 'active' : ''}`} onClick={() => toggleService(service.id)} />
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            );
+        };
+        
+        const AdminEnquiries = () => {
+            const { enquiries } = useApp();
+            
+            return (
+                <div>
+                    <h2 style={{ fontSize: '28px', marginBottom: '32px' }}>Enquiries ({enquiries.length})</h2>
+                    
+                    {enquiries.length === 0 ? (
+                        <div style={{ textAlign: 'center', padding: '64px', background: 'white', borderRadius: '12px' }}>
+                            <div style={{ fontSize: '64px', marginBottom: '16px' }}>📭</div>
+                            <p style={{ color: '#636E72', fontSize: '18px' }}>No enquiries yet</p>
+                        </div>
+                    ) : (
+                        <div style={{ background: 'white', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 12px rgba(26,26,46,0.08)', border: '1px solid #E1E8ED' }}>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Company</th>
+                                        <th>Contact Person</th>
+                                        <th>Mobile</th>
+                                        <th>Service</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {enquiries.map(enq => (
+                                        <tr key={enq.id}>
+                                            <td>{new Date(enq.date).toLocaleDateString()}</td>
+                                            <td><strong>{enq.companyName}</strong></td>
+                                            <td>{enq.contactPerson}</td>
+                                            <td>{enq.mobile}</td>
+                                            <td>{enq.serviceRequired}</td>
+                                            <td><span style={{ padding: '6px 14px', borderRadius: '999px', fontSize: '12px', fontWeight: 700, background: '#E3F2FD', color: '#1565C0' }}>{enq.status}</span></td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    )}
+                </div>
+            );
+        };
+        
+        const AdminSettings = () => {
+            const { config, updateData, disclaimer } = useApp();
+            const [form, setForm] = useState(config.contact);
+            const [disclaimerText, setDisclaimerText] = useState(disclaimer);
+            
+            const saveContact = () => {
+                updateData('config', { ...config, contact: form });
+                alert('✅ Contact details updated!');
+            };
+            
+            const saveDisclaimer = () => {
+                updateData('disclaimer', disclaimerText);
+                alert('✅ Disclaimer updated!');
+            };
+            
+            return (
+                <div>
+                    <h2 style={{ fontSize: '28px', marginBottom: '32px' }}>Settings</h2>
+                    
+                    <div className="card" style={{ marginBottom: '24px' }}>
+                        <h3 style={{ fontSize: '20px', marginBottom: '24px' }}>Contact Details</h3>
+                        <div style={{ display: 'grid', gap: '16px' }}>
+                            <div>
+                                <label style={{ display: 'block', marginBottom: '8px', fontWeight: 600, fontSize: '14px', color: 'var(--primary)' }}>Mobile</label>
+                                <input type="tel" value={form.mobile} onChange={e => setForm({...form, mobile: e.target.value})} />
+                            </div>
+                            <div>
+                                <label style={{ display: 'block', marginBottom: '8px', fontWeight: 600, fontSize: '14px', color: 'var(--primary)' }}>Email</label>
+                                <input type="email" value={form.email} onChange={e => setForm({...form, email: e.target.value})} />
+                            </div>
+                            <div>
+                                <label style={{ display: 'block', marginBottom: '8px', fontWeight: 600, fontSize: '14px', color: 'var(--primary)' }}>Address</label>
+                                <textarea rows="2" value={form.address} onChange={e => setForm({...form, address: e.target.value})} />
+                            </div>
+                            <button onClick={saveContact} className="btn btn-primary">Save Contact Details</button>
+                        </div>
+                    </div>
+                    
+                    <div className="card">
+                        <h3 style={{ fontSize: '20px', marginBottom: '24px' }}>Pricing Disclaimer</h3>
+                        <textarea rows="4" value={disclaimerText} onChange={e => setDisclaimerText(e.target.value)} style={{ marginBottom: '16px' }} />
+                        <button onClick={saveDisclaimer} className="btn btn-primary">Save Disclaimer</button>
+                    </div>
+                </div>
+            );
+        };
+        
+        // ==================== RENDER APP ====================
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
